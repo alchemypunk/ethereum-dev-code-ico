@@ -110,12 +110,12 @@ interface tokenRecipient {
 }
     
 contract TokenERC20 {
-    
+        
     // Public variables of the token
     string public name;
     string public symbol;
     uint8 public decimals = 18;
-    
+        
     // 18 decimals is the strongly suggested default, avoid changing it
     uint256 public totalSupply;
     
@@ -125,30 +125,30 @@ contract TokenERC20 {
     
     // This generates a public event on the blockchain that will notify clients
     event Transfer(address indexed from, address indexed to, uint256 value);
-    
+        
     // This notifies clients about the amount burnt
     event Burn(address indexed from, uint256 value);
-    
+        
     /**
      * Constrctor function
      * Initializes contract with initial supply tokens to the creator of the contract
     */
-    
-    function TokenERC20(uint256 initialSupply, string tokenName, string tokenSymbol) 
-        public {
+        
+    function TokenERC20(uint256 initialSupply, string tokenName, string tokenSymbol ) public {
             // Update total supply with the decimal amount
             totalSupply = initialSupply * 10 ** uint256(decimals);
-            
+                
             // Give the creator all initial tokens
             balanceOf[msg.sender] = totalSupply;
-            
+                
             // Set the name for display purposes
             name = tokenName;
             
             // Set the symbol for display purposes
             symbol = tokenSymbol;
-        }
-        
+            
+    }
+    
     /**
      * Internal transfer, only can be called by this contract
     */
@@ -177,7 +177,7 @@ contract TokenERC20 {
         assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
         
     }
-                    
+    
     /**
      * Transfer tokens
      * Send `_value` tokens to `_to` from your account
@@ -237,7 +237,7 @@ contract TokenERC20 {
             return true;
             
         }
-            
+        
     }
     
     /**
@@ -289,7 +289,6 @@ contract TokenERC20 {
         
     }
 }
-
 ```
 
 
