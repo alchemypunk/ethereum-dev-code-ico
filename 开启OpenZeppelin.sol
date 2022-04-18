@@ -6,8 +6,8 @@ import "zeppelin-solidity/contracts/token/StandardToken.sol";
 
 // 通过 is 关键字继承
 StandardTokencontract GitToken is StandardToken {
-    string public name = "GitToken"; // Token 名称
-    string public symbol = "EGT";// Token 标识 例如：ETH/EOS
+    string public name = "ABitcoin"; // Token 名称
+    string public symbol = "ABC";// Token 标识 例如：ETH/EOS
     uint public decimals = 18;// 计量单位，和 ETH 保持一样就设置为 18
     uint public INITIAL_SUPPLY = 10000 * (10 ** decimals);// 初始供应量  // 与 contract 同名的函数为本 contract 的构造方法，类似于 JavaScript 当中的 constructor
     
