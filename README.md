@@ -89,7 +89,8 @@ mkdir my-icocd my-ico npm init -y truffle init
 
 我们在编写智能合约时，需要在 `contracts` 目录下新建相应的智能合约文件。
 
-在以太坊开发智能合约的编程语言叫做 Solidity (https://goo.gl/hCHh3w)。它是一种在语法上非常类似 JavaScript 的语言，其后缀名为 `.sol` 。
+在以太坊开发智能合约的编程语言叫做 Solidity (https://docs.soliditylang.org/en/develop/)。
+它是一种在语法上非常类似 JavaScript 的语言，其后缀名为 `.sol` 。
 
 例如在这里我们可以创建一个名为 `GitCoin.sol` 的文件，命令如下。
 ```
